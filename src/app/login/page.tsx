@@ -102,7 +102,8 @@ const LoginPage = () => {
               <button
                 onClick={() =>
                   signIn('google', {
-                    callbackUrl: 'http://localhost:3000/dashboard',
+                    callbackUrl:
+                      'https://portfolio-frontend-navy.vercel.app/dashboard',
                   })
                 }
                 className="p-2 border-2 border-gray-800 rounded-sm"
@@ -121,7 +122,8 @@ const LoginPage = () => {
               <button
                 onClick={() =>
                   signIn('github', {
-                    callbackUrl: 'http://localhost:3000/dashboard',
+                    callbackUrl:
+                      'https://portfolio-frontend-navy.vercel.app/dashboard',
                   })
                 }
                 className="p-2 border-2 border-gray-800 rounded-sm"

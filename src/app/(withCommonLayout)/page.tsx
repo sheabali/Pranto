@@ -7,7 +7,6 @@ import Skills from '@/pages/Home/Skills/Skills';
 import React from 'react';
 
 const HomePage = async () => {
-  // const session = await getServerSession(authOptions);
   return (
     <div>
       <Banner />
