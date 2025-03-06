@@ -17,7 +17,7 @@ export type FormValues = {
 
 const LoginPage = () => {
   const router = useRouter();
-
+  // console.log()
   const {
     register,
     handleSubmit,
