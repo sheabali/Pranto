@@ -1,20 +1,59 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 'use client';
 
-import { Player } from '@lottiefiles/react-lottie-player';
-import animationData from '../../lottie/w-map/world.json';
+import { useEffect, useRef, useState } from 'react';
+import { useTheme } from 'next-themes';
+import SunAnimation from '../../lottie/w-map/world.json';
+import SunLightAnimation from '../../lottie/w-map/world.json';
 
-export default function WMap() {
-  try {
-    return (
-      <Player
-        autoplay
-        loop
-        src={animationData}
-        style={{ height: '100%', width: '100%' }}
-      />
-    );
-  } catch (error) {
-    console.error('Lottie Player load failed:', error);
-    return <div>Error loading animation</div>;
-  }
-}
+const WMap = () => {
+  const { resolvedTheme } = useTheme();
+  const [isClient, setIsClient] = useState(false);
+  const containerRef = useRef<HTMLDivElement | null>(null);
+  const animationInstance = useRef<any>(null); // lottie-web instance
+
+  useEffect(() => {
+    setIsClient(true); // Prevent SSR-related issues
+  }, []);
+
+  useEffect(() => {
+    if (!isClient || !resolvedTheme || !containerRef.current) return;
+
+    const loadLottie = async () => {
+      const lottie = await import('lottie-web');
+
+      // Destroy previous animation if any
+      if (animationInstance.current) {
+        animationInstance.current.destroy();
+      }
+
+      // Load new animation
+      animationInstance.current = lottie.default.loadAnimation({
+        container: containerRef.current!,
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        animationData:
+          resolvedTheme === 'light' ? SunAnimation : SunLightAnimation,
+        rendererSettings: {
+          preserveAspectRatio: 'xMidYMid meet',
+        },
+      });
+    };
+
+    loadLottie();
+
+    // Cleanup on unmount
+    return () => {
+      if (animationInstance.current) {
+        animationInstance.current.destroy();
+      }
+    };
+  }, [resolvedTheme, isClient]);
+
+  if (!isClient || !resolvedTheme) return null;
+
+  return <div className="w-full h-auto max-w-[1000px] " ref={containerRef} />;
+};
+
+export default WMap;

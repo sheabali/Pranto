@@ -9,11 +9,8 @@ import {
 import Container from '@/components/Container/Container';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import dynamic from 'next/dynamic';
-
-const WMap = dynamic(() => import('@/components/lottie-ui/w-map'), {
-  ssr: false,
-});
+import WMap from '@/components/lottie-ui/w-map';
+// import WorldIcon from '@/components/lottie-ui/world-icon';
 
 const Banner = () => {
   return (
@@ -21,14 +18,14 @@ const Banner = () => {
       <div className="flex flex-col lg:flex-row justify-between items-center gap-4 py-3 mb-10">
         {/* Left Side Text */}
         <motion.div
-          className="w-full lg:w-[50%] lg:mt-10"
+          className="w-full lg:w-[50%]  lg:mt-10"
           initial={{ x: -100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.8 }}
         >
           <h1 className="text-5xl font-semibold">
             Hello I’m Sheikh Pranto. <br />{' '}
-            <span className="relative b-underline-skew font-bold underline-skew">
+            <span className="relative b-underline-skew font-bold  underline-skew">
               Full Stack MERN{' '}
             </span>{' '}
             Developer
@@ -67,7 +64,9 @@ const Banner = () => {
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.8 }}
         >
+          {/* <Image src={BannerImage} width={800} height={400} alt="Banner" /> */}
           <WMap />
+          {/* <WorldIcon /> */}
         </motion.div>
       </div>
     </Container>
