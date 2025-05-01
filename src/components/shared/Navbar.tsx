@@ -6,9 +6,9 @@ import { Button } from '../ui/button';
 import Image from 'next/image';
 import { logo } from '../constant/global';
 
-import SunIcon from '../lottie-ui/eyes';
 import ThemeToggle from '../theme-toggle';
 import Download from '../lottie-ui/download-icon';
+import SendIcon from '../lottie-ui/eyes';
 
 const Navbar = () => {
   return (
@@ -83,7 +83,7 @@ const Navbar = () => {
           <ThemeToggle />
         </div>
         <Button className="font-bold   py-6">
-          <SunIcon /> Resume <Download />
+          <SendIcon /> Resume <Download />
         </Button>
       </div>
     </div>

@@ -51,7 +51,7 @@ const Download = () => {
   };
 
   return (
-    <a href="/MERN%20Stack.pdf" download className="relative z-10">
+    <a href="/MERN Stack.pdf" download className="relative z-10">
       <div
         ref={downloadContainer}
         onMouseEnter={lottieHover}

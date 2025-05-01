@@ -2,8 +2,9 @@
 
 import Container from '@/components/Container/Container';
 import Image from 'next/image';
-import { LuSquareArrowOutUpRight } from 'react-icons/lu';
+// import { LuSquareArrowOutUpRight } from 'react-icons/lu';
 import { motion } from 'framer-motion';
+import SendmessageIcon from '@/components/lottie-ui/send-icon';
 
 const projects = [
   {
@@ -138,14 +139,17 @@ const Project = () => {
                 </motion.div>
 
                 {/* Link */}
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-4 inline-block text-gray-400 hover:text-white text-lg"
-                >
-                  <LuSquareArrowOutUpRight size={24} />
-                </a>
+                <div>
+                  {/* Link */}
+                  <div>
+                    <div className="mt-4 inline-block outline rounded-full">
+                      <SendmessageIcon
+                        link={project.link}
+                        lottieName={project.title}
+                      />
+                    </div>
+                  </div>
+                </div>
               </div>
             </motion.div>
           ))}

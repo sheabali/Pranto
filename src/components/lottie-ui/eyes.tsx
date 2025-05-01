@@ -2,78 +2,82 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { useTheme } from 'next-themes';
-import EyesAnimation from '../../lottie/eyes/eyes.json';
-import EyesLightAnimation from '../../lottie/eyes/EyeLight.json';
+import EyeAnimation from '../../lottie/eyes/eyes.json';
+import EyeLightAnimation from '../../lottie/eyes/EyeLight.json';
 
-const EyesIcon = () => {
+const SendIcon = () => {
   const { resolvedTheme } = useTheme();
-  const [mounted, setMounted] = useState(false); // track client-side mount
-  const eyesIconContainer = useRef<HTMLDivElement | null>(null);
+  const isLightMode = resolvedTheme === 'light';
+  const sendIconContainer = useRef<HTMLDivElement | null>(null);
+  const [isClient, setIsClient] = useState(false);
 
+  // Set the flag to ensure the code runs only on the client-side
   useEffect(() => {
-    setMounted(true);
+    setIsClient(true);
   }, []);
 
+  async function getLottie() {
+    const lot = await import('lottie-web');
+
+    if (!sendIconContainer.current) return;
+    lot.default.loadAnimation({
+      name: 'SendIcon',
+      renderer: 'svg',
+      loop: false,
+      autoplay: false,
+      animationData: isLightMode ? EyeAnimation : EyeLightAnimation,
+      container: sendIconContainer.current,
+      rendererSettings: {
+        preserveAspectRatio: 'xMinYMin slice',
+      },
+    });
+  }
+
+  async function destroyLottie() {
+    const lot = await import('lottie-web');
+    lot.default.destroy('SendIcon');
+  }
+
   useEffect(() => {
-    if (!mounted || !resolvedTheme) return;
-
-    const loadLottie = async () => {
-      const lot = await import('lottie-web');
-
-      if (!eyesIconContainer.current) return;
-
-      lot.default.loadAnimation({
-        name: 'EyesIcon',
-        renderer: 'svg',
-        loop: false,
-        autoplay: false,
-        animationData:
-          resolvedTheme === 'light' ? EyesAnimation : EyesLightAnimation,
-        container: eyesIconContainer.current,
-        rendererSettings: {
-          preserveAspectRatio: 'xMinYMin slice',
-        },
-      });
-    };
-
-    loadLottie();
+    if (isClient) {
+      getLottie();
+    }
 
     return () => {
-      const destroyLottie = async () => {
-        const lot = await import('lottie-web');
-        lot.default.destroy('EyesIcon');
-      };
-      destroyLottie();
+      if (isClient) {
+        destroyLottie();
+      }
     };
-  }, [mounted, resolvedTheme]);
+  }, [isLightMode, resolvedTheme, isClient]);
 
   const lottieHover = async () => {
     const lot = await import('lottie-web');
-    lot.default.play('EyesIcon');
+    lot.default.play('SendIcon');
   };
 
   const lottieLeave = async () => {
     const lot = await import('lottie-web');
-    lot.default.stop('EyesIcon');
+    lot.default.stop('SendIcon');
   };
 
-  // ✅ Avoid rendering until mounted + theme resolved
-  if (!mounted || !resolvedTheme) return null;
+  // Ensure it only renders on the client-side to avoid hydration errors
+  if (!isClient) return null;
 
   return (
-    <div
-      onMouseEnter={lottieHover}
-      onMouseLeave={lottieLeave}
-      className="group/eyes h-full w-full flex items-center justify-center"
+    <a
+      href="/MERN Stack.pdf"
+      target="_blank"
+      rel="noreferrer noopener"
+      className="relative z-10"
     >
       <div
-        ref={eyesIconContainer}
-        className={`h-10 w-10 ${
-          resolvedTheme === 'light' ? '' : 'opacity-90'
-        } group-hover/eyes:opacity-100 transition-opacity`}
+        ref={sendIconContainer}
+        onMouseEnter={lottieHover}
+        onMouseLeave={lottieLeave}
+        className="h-10 w-10 opacity-90 hover:opacity-100 transition-opacity"
       />
-    </div>
+    </a>
   );
 };
 
-export default EyesIcon;
+export default SendIcon;

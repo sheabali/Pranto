@@ -18,12 +18,12 @@ const Banner = () => {
       <div className="flex flex-col lg:flex-row justify-between items-center gap-4 py-3 mb-10">
         {/* Left Side Text */}
         <motion.div
-          className="w-full lg:w-[50%]  lg:mt-10"
+          className="w-full lg:w-[45%]  lg:mt-10"
           initial={{ x: -100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-5xl font-semibold">
+          <h1 className="text-4xl font-semibold">
             Hello I’m Sheikh Pranto. <br />{' '}
             <span className="relative b-underline-skew font-bold  underline-skew">
               Full Stack MERN{' '}
@@ -59,7 +59,7 @@ const Banner = () => {
 
         {/* Right Side Image */}
         <motion.div
-          className="w-full lg:w-[50%] lg:h-0 flex justify-center items-center"
+          className="w-full lg:w-[55%] lg:h-0 flex justify-center items-center"
           initial={{ x: 100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.8 }}
