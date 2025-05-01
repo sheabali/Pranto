@@ -6,6 +6,8 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import SendmessageIcon from '@/components/lottie-ui/send-icon';
 
+import DArrow from '@/components/lottie-ui/d-arrow';
+
 const projects = [
   {
     id: 1,
@@ -30,7 +32,7 @@ const projects = [
     work: 'PROJECT AT 🌎 PRACTICE PROJECT',
     title: 'Euphoria - Ecommerce (Apparels) Website Template',
     description:
-      'I am Sheikh Pranto. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s. When an unknown printer took a galley of type and scrambled it to specimen book.',
+      'I am Sheikh Pranto. Lorem Ipsum has , been the industry’s standard dummy text ever since the 1500s. When an unknown printer took a galley of type and scrambled it to specimen book.',
     image: 'https://i.ibb.co.com/9925DtpM/image-770.png',
     link: 'https://car-store-frontend-eight.vercel.app',
     icon: [
@@ -49,7 +51,7 @@ const projects = [
     work: 'PROJECT AT 🌎 PRACTICE PROJECT',
     title: 'Blog Website Template',
     description:
-      'I am Sheikh Pranto. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s. When an unknown printer took a galley of type and scrambled it to specimen book.',
+      'I am Sheikh Pranto. Lorem Ipsums has been the industry’s standard dummy text ever since the 1500s. When an unknown printer took a galley of type and scrambled it to specimen book.',
     image: 'https://i.ibb.co.com/Q7KW0z5b/image-770-1.png',
     link: 'https://sheib.netlify.app/',
     icon: ['https://i.ibb.co.com/B5J4VPyz/nextjs-512x512.png'],
@@ -59,7 +61,7 @@ const projects = [
     work: 'PROJECT AT 🌎 PRACTICE PROJECT',
     title: 'Personalized Meal Planning & Delivery',
     description:
-      'Meal Planning & Delivery Web Application where users can personalize their meal plans and have meals delivered based on their dietary preferences and schedules. The platform should allow customers to choose meal options, set dietary preferences, and schedule deliveries, while meal providers can manage menus and respond to customer requests.',
+      'Meal Planning & Delivery Webs Application where users can personalize their meal plans and have meals delivered based on their dietary preferences and schedules. The platform should allow customers to choose meal options, set dietary preferences, and schedule deliveries, while meal providers can manage menus and respond to customer requests.',
     image: 'https://i.ibb.co.com/8DZtWWpM/image-771.png',
     link: 'https://sheib.netlify.app/',
     icon: [
@@ -131,23 +133,28 @@ const Project = () => {
                     <Image
                       key={key}
                       src={icon}
-                      height={30}
-                      width={30}
+                      height={35}
+                      width={35}
                       alt="icon"
                     />
                   ))}
                 </motion.div>
 
                 {/* Link */}
-                <div>
-                  {/* Link */}
+                <div className="flex items-center gap-4 mt-6">
                   <div>
-                    <div className="mt-4 inline-block outline rounded-full">
+                    <div className="">
                       <SendmessageIcon
                         link={project.link}
                         lottieName={project.title}
                       />
                     </div>
+                  </div>
+                  <div>
+                    <DArrow
+                      link={project.link}
+                      lottieName={project.description}
+                    />
                   </div>
                 </div>
               </div>
