@@ -54,13 +54,13 @@ const Skills = () => {
   return (
     <Container>
       <div className="text-center my-14">
-        <h1 className="text-4xl">
-          My <span className="font-bold">Skills</span>
+        <h1 className="text-4xl relative inline-block font-bold  underline-skew">
+          My <span className="font-bol ">Skills</span>
         </h1>
       </div>
 
       <motion.div
-        className="p-6 sm:p-10 bg-white rounded shadow"
+        className="p-6 sm:p-10  rounded shadow"
         variants={containerVariants}
         initial="hidden"
         animate="show"
@@ -70,7 +70,7 @@ const Skills = () => {
             <motion.div
               key={index}
               variants={itemVariants}
-              className="border border-black rounded p-4 flex items-center justify-center"
+              className="border border-black bg-white rounded p-4 flex items-center justify-center"
               whileHover={{ scale: 1.1 }}
             >
               <Image

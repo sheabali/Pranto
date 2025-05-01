@@ -2,13 +2,13 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { useTheme } from 'next-themes';
-import MoonAnimation from '../../lottie/moon/Moon.json';
-import MoonLightAnimation from '../../lottie/moon/MoonLight.json';
+import EyesAnimation from '../../lottie/eyes/eyes.json';
+import EyesLightAnimation from '../../lottie/eyes/EyeLight.json';
 
-const MoonIcon = () => {
+const EyesIcon = () => {
   const { resolvedTheme } = useTheme();
-  const [mounted, setMounted] = useState(false); // detect client mount
-  const moonIconContainer = useRef<HTMLDivElement | null>(null);
+  const [mounted, setMounted] = useState(false); // track client-side mount
+  const eyesIconContainer = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     setMounted(true);
@@ -20,16 +20,16 @@ const MoonIcon = () => {
     const loadLottie = async () => {
       const lot = await import('lottie-web');
 
-      if (!moonIconContainer.current) return;
+      if (!eyesIconContainer.current) return;
 
       lot.default.loadAnimation({
-        name: 'MoonIcon',
+        name: 'EyesIcon',
         renderer: 'svg',
         loop: false,
         autoplay: false,
         animationData:
-          resolvedTheme === 'light' ? MoonAnimation : MoonLightAnimation,
-        container: moonIconContainer.current,
+          resolvedTheme === 'light' ? EyesAnimation : EyesLightAnimation,
+        container: eyesIconContainer.current,
         rendererSettings: {
           preserveAspectRatio: 'xMinYMin slice',
         },
@@ -41,7 +41,7 @@ const MoonIcon = () => {
     return () => {
       const destroyLottie = async () => {
         const lot = await import('lottie-web');
-        lot.default.destroy('MoonIcon');
+        lot.default.destroy('EyesIcon');
       };
       destroyLottie();
     };
@@ -49,33 +49,31 @@ const MoonIcon = () => {
 
   const lottieHover = async () => {
     const lot = await import('lottie-web');
-    lot.default.play('MoonIcon');
+    lot.default.play('EyesIcon');
   };
 
   const lottieLeave = async () => {
     const lot = await import('lottie-web');
-    lot.default.stop('MoonIcon');
+    lot.default.stop('EyesIcon');
   };
 
-  // Avoid rendering until on client and theme is resolved
+  // ✅ Avoid rendering until mounted + theme resolved
   if (!mounted || !resolvedTheme) return null;
-
-  const isLightMode = resolvedTheme === 'light';
 
   return (
     <div
       onMouseEnter={lottieHover}
       onMouseLeave={lottieLeave}
-      className="group/moon h-full w-full flex items-center justify-center"
+      className="group/eyes h-full w-full flex items-center justify-center"
     >
       <div
-        ref={moonIconContainer}
+        ref={eyesIconContainer}
         className={`h-10 w-10 ${
-          !isLightMode ? '' : 'opacity-50'
-        } group-hover/moon:opacity-100 transition-opacity`}
+          resolvedTheme === 'light' ? '' : 'opacity-90'
+        } group-hover/eyes:opacity-100 transition-opacity`}
       />
     </div>
   );
 };
 
-export default MoonIcon;
+export default EyesIcon;

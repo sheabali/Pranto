@@ -50,7 +50,7 @@ const Contact = () => {
   return (
     <Container>
       <div className="my-10 mx-auto">
-        <div className="mx-auto flex flex-col md:flex-row justify-center gap-11 bg-white rounded-lg">
+        <div className="mx-auto flex flex-col md:flex-row justify-center gap-11 rounded-lg">
           <div className="w-full md:w-1/2">
             <form onSubmit={handleSubmit(onSubmit)}>
               <div className="mb-6">
@@ -59,7 +59,7 @@ const Contact = () => {
                   type="text"
                   {...register('name')}
                   placeholder="Your Name"
-                  className="mt-1 block w-full px-4 py-5 border-[2px] rounded-none border-black sm:text-sm"
+                  className="mt-1 block w-full px-4 py-5 border-[2px] rounded-none border-gray-300  sm:text-sm"
                 />
                 {errors.name && (
                   <p className="text-red-500 text-sm">{errors.name.message}</p>
@@ -72,7 +72,7 @@ const Contact = () => {
                   type="text"
                   {...register('email')}
                   placeholder="Email"
-                  className="mt-1 block w-full px-4 py-5 border-[2px] rounded-none border-black sm:text-sm"
+                  className="mt-1 block   w-full px-4 py-5 border-[2px] border-gray-300 rounded-none sm:text-sm"
                 />
                 {errors.email && (
                   <p className="text-red-500 text-sm">{errors.email.message}</p>
@@ -85,7 +85,7 @@ const Contact = () => {
                   type="text"
                   {...register('website')}
                   placeholder="Your website (If exists)"
-                  className="mt-1 block w-full px-4 py-5 border-[2px] rounded-none border-black sm:text-sm"
+                  className="mt-1 block w-full px-4 py-5 border-[2px] rounded-none border-gray-300  sm:text-sm"
                 />
                 {errors.website && (
                   <p className="text-red-500 text-sm">
@@ -99,7 +99,7 @@ const Contact = () => {
                   id="message"
                   {...register('message')}
                   placeholder="How can I help?"
-                  className="mt-1 block w-full px-4 py-5 border-[2px] rounded-none border-black sm:text-sm"
+                  className="mt-1 block w-full px-4 py-5 border-[2px] rounded-none border-gray-300  sm:text-sm"
                 />
                 {errors.message && (
                   <p className="text-red-500 text-sm">
@@ -116,7 +116,7 @@ const Contact = () => {
                   Get In Touch
                 </Button>
                 <div className="flex justify-normal items-center gap-4">
-                  <button className="p-2 border-2 border-gray-800 rounded-sm">
+                  <button className="bg-white p-2 border-2 border-gray-800 rounded-sm">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       x="0px"
@@ -128,7 +128,7 @@ const Contact = () => {
                       <path d="M25,3C12.85,3,3,12.85,3,25c0,11.03,8.125,20.137,18.712,21.728V30.831h-5.443v-5.783h5.443v-3.848 c0-6.371,3.104-9.168,8.399-9.168c2.536,0,3.877,0.188,4.512,0.274v5.048h-3.612c-2.248,0-3.033,2.131-3.033,4.533v3.161h6.588 l-0.894,5.783h-5.694v15.944C38.716,45.318,47,36.137,47,25C47,12.85,37.15,3,25,3z"></path>
                     </svg>
                   </button>
-                  <button className="p-2 border-2 border-gray-800 rounded-sm">
+                  <button className="bg-white p-2 border-2 border-gray-800 rounded-sm">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       x="0px"
@@ -140,7 +140,7 @@ const Contact = () => {
                       <path d="M 11 4 C 7.134 4 4 7.134 4 11 L 4 39 C 4 42.866 7.134 46 11 46 L 39 46 C 42.866 46 46 42.866 46 39 L 46 11 C 46 7.134 42.866 4 39 4 L 11 4 z M 13.085938 13 L 21.023438 13 L 26.660156 21.009766 L 33.5 13 L 36 13 L 27.789062 22.613281 L 37.914062 37 L 29.978516 37 L 23.4375 27.707031 L 15.5 37 L 13 37 L 22.308594 26.103516 L 13.085938 13 z M 16.914062 15 L 31.021484 35 L 34.085938 35 L 19.978516 15 L 16.914062 15 z"></path>
                     </svg>
                   </button>
-                  <button className="p-2 border-2 border-gray-800 rounded-sm">
+                  <button className="bg-white p-2 border-2 border-gray-800 rounded-sm">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       x="0px"
@@ -152,7 +152,7 @@ const Contact = () => {
                       <path d="M41,4H9C6.24,4,4,6.24,4,9v32c0,2.76,2.24,5,5,5h32c2.76,0,5-2.24,5-5V9C46,6.24,43.76,4,41,4z M17,20v19h-6V20H17z M11,14.47c0-1.4,1.2-2.47,3-2.47s2.93,1.07,3,2.47c0,1.4-1.12,2.53-3,2.53C12.2,17,11,15.87,11,14.47z M39,39h-6c0,0,0-9.26,0-10 c0-2-1-4-3.5-4.04h-0.08C27,24.96,26,27.02,26,29c0,0.91,0,10,0,10h-6V20h6v2.56c0,0,1.93-2.56,5.81-2.56 c3.97,0,7.19,2.73,7.19,8.26V39z"></path>
                     </svg>
                   </button>
-                  <button className="p-2 border-2 border-gray-800 rounded-sm">
+                  <button className="bg-white p-2 border-2 border-gray-800 rounded-sm">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       x="0px"

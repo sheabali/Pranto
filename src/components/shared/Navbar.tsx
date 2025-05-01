@@ -2,11 +2,13 @@
 
 import Link from 'next/link';
 import { Button } from '../ui/button';
-import { Download } from 'lucide-react';
+
 import Image from 'next/image';
 import { logo } from '../constant/global';
 
-import { ModeToggle } from '../ModeToggle';
+import SunIcon from '../lottie-ui/eyes';
+import ThemeToggle from '../theme-toggle';
+import Download from '../lottie-ui/download-icon';
 
 const Navbar = () => {
   return (
@@ -78,10 +80,10 @@ const Navbar = () => {
 
       <div className="flex gap-4 font-medium items-center">
         <div>
-          <ModeToggle />
+          <ThemeToggle />
         </div>
-        <Button className="font-bold py-5">
-          Resume <Download />
+        <Button className="font-bold   py-6">
+          <SunIcon /> Resume <Download />
         </Button>
       </div>
     </div>

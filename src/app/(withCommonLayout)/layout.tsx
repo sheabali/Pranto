@@ -1,8 +1,7 @@
 import Navbar from '@/components/shared/Navbar';
-import { authOptions } from '@/utils/authOptions';
 
 import type { Metadata } from 'next';
-import { getServerSession } from 'next-auth';
+
 import { ThemeProvider } from 'next-themes';
 
 export const metadata: Metadata = {
@@ -15,13 +14,11 @@ export default async function CommonLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const session = await getServerSession(authOptions);
-
   return (
     <div className="min-h-screen my-2">
       <div>
         <div>
-          <Navbar session={session} />
+          <Navbar />
           <ThemeProvider attribute="class">{children}</ThemeProvider>
         </div>
       </div>

@@ -1,7 +1,6 @@
 'use client';
 
 import {
-  BannerImage,
   Discord,
   Facebook,
   Github,
@@ -10,27 +9,35 @@ import {
 import Container from '@/components/Container/Container';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import dynamic from 'next/dynamic';
+
+const WMap = dynamic(() => import('@/components/lottie-ui/w-map'), {
+  ssr: false,
+});
 
 const Banner = () => {
   return (
     <Container>
-      <div className="flex flex-col lg:flex-row justify-between gap-4 py-3 mb-10">
+      <div className="flex flex-col lg:flex-row justify-between items-center gap-4 py-3 mb-10">
         {/* Left Side Text */}
         <motion.div
-          className="w-full lg:w-[50%]"
+          className="w-full lg:w-[50%] lg:mt-10"
           initial={{ x: -100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.8 }}
         >
           <h1 className="text-5xl font-semibold">
-            Hello I’m Sheikh Pranto. <br /> Frontend Developer <br /> Based In
-            Bangladesh.
+            Hello I’m Sheikh Pranto. <br />{' '}
+            <span className="relative b-underline-skew font-bold underline-skew">
+              Full Stack MERN{' '}
+            </span>{' '}
+            Developer
           </h1>
           <p className="mt-7 text-base">
-            I’m Evren Shah. Lorem Ipsum is simply dummy text of the printing and
-            typesetting industry. Lorem Ipsum has been the industrys standard
-            dummy text ever since the 1500s, when an unknown printer took a
-            galley of type and scrambled it to make a type specimen book.
+            Enthusiastic about front-end and back-end development, UI/UX best
+            practices, and turning ideas into fully functional, responsive web
+            applications. Lifelong learner dedicated to continuous growth,
+            collaboration, and making a positive impact on the web.
           </p>
 
           {/* Social Icons */}
@@ -41,7 +48,13 @@ const Banner = () => {
                 whileHover={{ scale: 1.2 }}
                 transition={{ type: 'spring', stiffness: 300 }}
               >
-                <Image src={icon} width={43} height={20} alt="Social Icon" />
+                <Image
+                  src={icon}
+                  width={43}
+                  height={20}
+                  alt="Social Icon"
+                  className="bg-white border-gray-400 border-2 rounded-full"
+                />
               </motion.div>
             ))}
           </div>
@@ -49,12 +62,12 @@ const Banner = () => {
 
         {/* Right Side Image */}
         <motion.div
-          className="w-full lg:w-[50%] flex justify-center items-center"
+          className="w-full lg:w-[50%] lg:h-0 flex justify-center items-center"
           initial={{ x: 100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.8 }}
         >
-          <Image src={BannerImage} width={800} height={400} alt="Banner" />
+          <WMap />
         </motion.div>
       </div>
     </Container>
