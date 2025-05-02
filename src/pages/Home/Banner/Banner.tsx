@@ -1,21 +1,35 @@
 'use client';
 
-import {
-  Discord,
-  Facebook,
-  Github,
-  Twitter,
-} from '@/components/constant/global';
-import Container from '@/components/Container/Container';
+import { Linkedin, Mail, Github } from '@/components/constant/global';
+// import Container from '@/components/Container/Container';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import WMap from '@/components/lottie-ui/w-map';
+import Container from '@/components/Container/Container';
 // import WorldIcon from '@/components/lottie-ui/world-icon';
+
+const socialLinks = [
+  {
+    icon: Github,
+    alt: 'GitHub',
+    href: 'https://github.com/sheabali',
+  },
+  {
+    icon: Mail,
+    alt: 'Mail',
+    href: 'mailto:iamskpranto@gmail.com',
+  },
+  {
+    icon: Linkedin,
+    alt: 'LinkedIn',
+    href: 'https://www.linkedin.com/in/sheikhpranto',
+  },
+];
 
 const Banner = () => {
   return (
     <Container>
-      <div className="flex flex-col lg:flex-row justify-between items-center gap-4 py-3 mb-10">
+      <div className="flex flex-col lg:flex-row justify-between items-center gap-4 py-3  my-10">
         {/* Left Side Text */}
         <motion.div
           className="w-full lg:w-[45%]  lg:mt-10"
@@ -39,20 +53,23 @@ const Banner = () => {
 
           {/* Social Icons */}
           <div className="flex gap-4 items-center mt-28">
-            {[Facebook, Discord, Twitter, Github].map((icon, index) => (
-              <motion.div
+            {socialLinks.map(({ icon, href, alt }, index) => (
+              <motion.a
                 key={index}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
                 whileHover={{ scale: 1.2 }}
                 transition={{ type: 'spring', stiffness: 300 }}
               >
                 <Image
                   src={icon}
-                  width={43}
-                  height={20}
-                  alt="Social Icon"
+                  width={35}
+                  height={43}
+                  alt={alt}
                   className="bg-white border-gray-400 border-2 rounded-full"
                 />
-              </motion.div>
+              </motion.a>
             ))}
           </div>
         </motion.div>

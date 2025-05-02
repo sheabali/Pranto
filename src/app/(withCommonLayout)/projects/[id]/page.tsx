@@ -25,7 +25,7 @@ const SingleProject = () => {
     if (!id) return;
     const fetchProject = async () => {
       try {
-        const res = await getProjectById(Number(id));
+        const res = await getProjectById(id);
         if (!res) throw new Error('Project not found');
         setProject(res);
       } catch (error) {

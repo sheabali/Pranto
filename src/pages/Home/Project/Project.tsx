@@ -21,9 +21,9 @@ const Project = () => {
 
   return (
     <Container>
-      <div className="bg-black min-h-screen p-6">
+      <div className=" border rounded min-h-screen p-6">
         <div className="flex justify-center">
-          <h1 className="my-10 text-white text-4xl relative inline-block font-bold underline-skew">
+          <h1 className="mb-20 mt-10  text-4xl relative inline-block font-bold underline-skew">
             My <span className="font-semibold">Projects</span>
           </h1>
         </div>

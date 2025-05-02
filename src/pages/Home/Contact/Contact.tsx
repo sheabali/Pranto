@@ -49,8 +49,8 @@ const Contact = () => {
 
   return (
     <Container>
-      <div className="my-10 mx-auto">
-        <div className="mx-auto flex flex-col md:flex-row justify-center gap-11 rounded-lg">
+      <div className="my-10 mx-auto border rounded py-20 ">
+        <div className="mx-auto flex flex-col md:flex-row justify-center gap-11 px-10 rounded-lg">
           <div className="w-full md:w-1/2">
             <form onSubmit={handleSubmit(onSubmit)}>
               <div className="mb-6">

@@ -10,7 +10,7 @@ const DArrow = ({
   link,
   lottieName = 'DAIcon',
 }: {
-  link?: number;
+  link?: string;
   lottieName?: string;
 }) => {
   const { resolvedTheme } = useTheme();

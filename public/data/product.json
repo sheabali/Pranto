@@ -1,6 +1,6 @@
 [
   {
-    "id": 1,
+    "id": "67c5e00a4naff84fad7213726",
     "work": "PROJECT AT 🌎 PRACTICE PROJECT",
     "title": "Personalized Meal Planning & Delivery",
     "description": "Meal Planning & Delivery Web Application where users can personalize their meal plans and have meals delivered based on their dietary preferences and schedules. The platform should allow customers to choose meal options, set dietary preferences, and schedule deliveries, while meal providers can manage menus and respond to customer requests.",
@@ -58,7 +58,7 @@
     "deployment": ["Vercel", "GitHub"]
   },
   {
-    "id": 2,
+    "id": "67c5e00a459a84fadaf3726",
     "work": "PROJECT AT 🌎 PRACTICE PROJECT",
     "title": "Car Shop Application",
     "description": "A full-featured e-commerce platform for buying cars, featuring secure role-based authentication, JWT session handling, and responsive design. Users can browse, search, and filter cars, view detailed product pages, and place orders with integrated SurjoPay checkout. The role-based dashboard provides admin tools for managing users, products, and orders, while users can track their purchases and manage profiles. The app includes both public and private routes, ensuring a seamless, secure shopping experience.",
@@ -112,46 +112,51 @@
     "deployment": ["Vercel", "GitHub"]
   },
   {
-    "id": 3,
+    "id": "6ad5e00a459a84fad7213726",
     "work": "PROJECT AT 🌎 PRACTICE PROJECT",
-    "title": "Blog Website Template",
-    "description": "A sleek blog template designed for content writers and developers with markdown-based blog management.",
+    "title": "MeetCast is a powerful video conferencing platform.",
+    "description": "MeetCast is a powerful video conferencing platform designed to facilitate seamless virtual meetings, conferences, and collaborations. With a user-friendly interface and robust features, MeetCast provides an unparalleled communication experience for individuals and teams alike.",
     "image": "https://i.ibb.co.com/Q7KW0z5b/image-770-1.png",
-    "link": "/login",
-    "icon": ["https://i.ibb.co.com/B5J4VPyz/nextjs-512x512.png"],
-    "tags": ["Blog", "Content Writing", "Template"],
+    "link": "https://meetcast.netlify.app/",
+    "icon": [  "https://i.ibb.co.com/nMPTWSY0/react.png",
+    "https://i.ibb.co.com/DfGpf16R/Tailwind-CSS-Logo-svg.png",
+"https://i.ibb.co.com/6RggZn0Q/icons8-firebase-480.png",
+    "https://i.ibb.co.com/rRDf7krV/node-svgrepo-com.png",
+    "https://i.ibb.co.com/WvV30J4D/pngfind-com-pc-master-race-png-1363736.png",
+    "https://i.ibb.co.com/Q7GQ3VnD/mongodb-svgrepo-com.png"
+    ],
+    "tags": ["Video Vonferencing", "Video Chat App","Blog", "Content Writing", "Video call"],
     "techStack": ["Next.js", "TailwindCSS"],
     "videoDemo": "https://www.youtube.com/watch?v=example3",
     "duration": "1 month",
-    "clientOrTeam": "Personal Side Project",
+    "clientOrTeam": "Worked with a team of 4 developers and 1 designers.",
     "sourceCode": "https://github.com/username/blog-template",
     "testimonials": [
       {
-        "name": "Reviewer B",
-        "feedback": "Well structured and easy to customize."
+        "name": "Nafiz Ahmed",
+        "feedback": "This project significantly improved our customer experience."
       }
     ],
     "features": [
-      "Static generation of blog posts",
-      "Markdown-based content system",
+      "HD Video & Audio Quality",
+      "Real-Time Screen Sharing & Collaboration",
       "Author profile and social links",
-      "Light and dark theme support"
+      "Secure Meeting Controls"
     ],
     "challenges": [
       "Content rendering from markdown",
-      "SEO optimization for blog pages",
-      "Dark/light theme toggling"
+      "Secure Meeting Controlss"
     ],
     "learnings": [
-      "Working with markdown in Next.js",
-      "SEO practices in static pages",
+      "Real-Time Screen Sharing & Collaboration",
+      "Managing team access to an organization repository",
       "Dynamic theming with Tailwind"
     ],
-    "status": "Development",
+    "status": "Live",
     "responsibilities": [
       "Developed blog post templates",
-      "Handled markdown parsing logic",
-      "Integrated social profile components"
+      "Real-Time Screen Sharing & Collaboration",
+      "Integrated Profile about and more components"
     ],
     "awardsOrRecognition": ["Top Pick on IndieDev Gallery"],
     "deployment": ["Netlify", "GitHub"]

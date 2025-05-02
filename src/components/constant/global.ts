@@ -1,6 +1,9 @@
 export const logo = 'https://i.ibb.co.com/rRqzCDvN/logo-1.png';
 export const BannerImage = 'https://i.ibb.co.com/hJFVBzcY/Frame-20.png';
 export const Discord = 'https://i.ibb.co.com/VpN4p92Z/discord.png';
+export const Mail = 'https://i.ibb.co.com/dJz2QdWk/mail.png';
+export const Linkedin =
+  'https://i.ibb.co.com/CssnbJ9T/vecteezy-linkedin-apps-icon-19874370.png';
 export const Twitter = 'https://i.ibb.co.com/60Vv2ygx/twitter.png';
 export const Facebook = 'https://i.ibb.co.com/WNYPSjJd/facebook.png';
 export const Github = 'https://i.ibb.co.com/spTbxgnd/github.png';
@@ -41,7 +44,7 @@ export type TBlog = {
 };
 
 export type ProjectType = {
-  id: number;
+  id: string;
   work: string;
   title: string;
   description: string;

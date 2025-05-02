@@ -1,12 +1,13 @@
-import { ReactNode } from 'react';
+import React from 'react';
 
-interface ContainerProps {
-  children: ReactNode;
+interface NMContainerProps {
+  children: React.ReactNode;
+  className?: string;
 }
 
-const Container: React.FC<ContainerProps> = ({ children }) => {
+const Container = ({ children, className }: NMContainerProps) => {
   return (
-    <div className="max-w-[1280px] mx-4 md:mx-auto md:py-16">{children}</div>
+    <div className={`container mx-auto px-5 ${className}`}>{children}</div>
   );
 };
 
