@@ -8,10 +8,11 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Skeleton } from '@/components/ui/skeleton';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import Link from 'next/link';
+
 import { getProjectById } from '@/services/project';
 import { GoProjectSymlink } from 'react-icons/go';
 import { motion } from 'framer-motion';
+import SendmessageIcon from '@/components/lottie-ui/send-icon';
 
 const SingleProject = () => {
   const params = useParams();
@@ -97,7 +98,7 @@ const SingleProject = () => {
                 {project.icon?.map((iconUrl: string, index: number) => (
                   <div
                     key={index}
-                    className="bg-white p-1 rounded-full w-12 h-12 flex items-center justify-center shadow-md"
+                    className=" p-1 rounded-full w-12 h-12 flex items-center justify-center shadow-md"
                   >
                     <Image
                       src={iconUrl}
@@ -176,18 +177,14 @@ const SingleProject = () => {
                 </p>
               </div>
               <div className="flex gap-4">
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Button className="gap-2">
-                    <GoProjectSymlink className="text-xl" /> Live Preview
-                  </Button>
-                </a>
-                <Link href="/project">
-                  <Button variant="outline">Back to Projects</Button>
-                </Link>
+                <Button className="gap-2">
+                  <GoProjectSymlink className="text-xl" /> Live Preview
+                </Button>
+
+                <SendmessageIcon
+                  link={project.link}
+                  lottieName={project.title}
+                />
               </div>
             </div>
           </CardContent>

@@ -70,6 +70,7 @@ const DArrow = ({
 
   const content = (
     <div
+      title="Details"
       ref={arrowContainer}
       onMouseEnter={lottieHover}
       onMouseLeave={lottieLeave}
@@ -82,7 +83,7 @@ const DArrow = ({
       href={`projects/${String(link)}`}
       // target="_blank"
       // rel="noreferrer noopener"
-      className={`relative h-12 w-12 z-10 ${
+      className={`relative h-12 w-12 z-10  ${
         isLightMode ? 'bg-white' : 'hover:bg-white'
       } dark:hover:bg-zinc-700/25   border-white/10 flex items-center justify-center rounded-full transition-all`}
     >

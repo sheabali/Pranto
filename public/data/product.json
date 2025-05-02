@@ -9,46 +9,50 @@
     "icon": [
       "https://i.ibb.co.com/jZx1YXyB/icons8-next-js-400.png",
       "https://i.ibb.co.com/pjW65hTB/typescript.png",
+      "https://i.ibb.co.com/8nHj8ZgY/redux-512x486.png",
       "https://i.ibb.co.com/xS0NbQ7X/social.png",
+      "https://i.ibb.co.com/4DgqF9T/icons8-mongoose-700.png",
       "https://i.ibb.co.com/Q7GQ3VnD/mongodb-svgrepo-com.png",
       "https://i.ibb.co.com/WvV30J4D/pngfind-com-pc-master-race-png-1363736.png",
       "https://i.ibb.co.com/rRDf7krV/node-svgrepo-com.png"
     ],
-    "tags": ["Web Development", "Meal Planning", "E-commerce", "Next.js"],
-    "techStack": ["Next.js", "TypeScript", "Node.js", "MongoDB", "TailwindCSS"],
+    "tags": ["Redux", "Meal Planning", "Mongoose", "Next.js"],
+    "techStack": ["Next.js", "TypeScript", "Node.js", "MongoDB", "TailwindCSS","Mongoose"],
     "videoDemo": "https://www.youtube.com/watch?v=example",
-    "duration": "3 months",
-    "clientOrTeam": "Worked with a team of 4 developers and 2 designers.",
-    "sourceCode": "https://github.com/username/project",
+    "duration": "15 Days",
+    "clientOrTeam": "Worked on the full project by myself.",
+    "sourceCode": "https://github.com/sheabali/Meal-Box",
     "testimonials": [
       {
-        "name": "John Doe",
-        "feedback": "This project significantly improved our customer experience."
+        "name": "Examiner",
+        "feedback": "This project significantly improved our customer experience. Best wishes from Programming Hero Team."
       }
     ],
     "features": [
-      "Role-based authentication",
-      "Meal customization by dietary preference",
-      "Order scheduling with calendar view",
-      "Image upload with preview and validation",
-      "Responsive dashboard for customers and providers",
-      "SurjoPay payment integration"
+      "🔐 Secure User Authentication",
+      "🧑‍🍳 Role-Specific Dashboards",
+      "🍽️ Personalized Meal Selection",
+      "🔍 Intelligent Search & Matching",
+      "🔐 Role-Based Access Control",
+      "💳 Stripe payment integration"
     ],
     "challenges": [
       "Dynamic sidebar with role-based layout",
-      "Form validation with image file in React Hook Form",
+      "Form validation with image file in Input Form",
       "Handling secure JWT-based authentication"
     ],
     "learnings": [
       "Efficient form handling with React Hook Form",
       "Role-specific UI logic in Next.js",
-      "Secure API route protection"
+      "Secure API route protection",
+      "Customizable pagination"
     ],
     "status": "Live",
     "responsibilities": [
       "Built full customer & provider dashboard",
       "Integrated form and image upload system",
-      "Implemented SurjoPay checkout system"
+      "Implemented Stripe checkout system and more."
+  
     ],
     "awardsOrRecognition": ["Featured in DevTalk Showcase 2025"],
     "deployment": ["Vercel", "GitHub"]
@@ -56,8 +60,8 @@
   {
     "id": 2,
     "work": "PROJECT AT 🌎 PRACTICE PROJECT",
-    "title": "Euphoria - Ecommerce (Apparels) Website Template",
-    "description": "E-commerce platform template built to showcase apparel products with filtering, search, and shopping cart features.",
+    "title": "Car Shop Application",
+    "description": "A full-featured e-commerce platform for buying cars, featuring secure role-based authentication, JWT session handling, and responsive design. Users can browse, search, and filter cars, view detailed product pages, and place orders with integrated SurjoPay checkout. The role-based dashboard provides admin tools for managing users, products, and orders, while users can track their purchases and manage profiles. The app includes both public and private routes, ensuring a seamless, secure shopping experience.",
     "image": "https://i.ibb.co.com/9925DtpM/image-770.png",
     "link": "https://car-store-frontend-eight.vercel.app",
     "icon": [
@@ -70,10 +74,10 @@
       "https://i.ibb.co.com/Q7GQ3VnD/mongodb-svgrepo-com.png",
       "https://i.ibb.co.com/4DgqF9T/icons8-mongoose-700.png"
     ],
-    "tags": ["Web Development", "E-commerce", "UI/UX", "React"],
+    "tags": ["Typescript", "Redux", "UI/UX", "React"],
     "techStack": ["React", "Redux", "TypeScript", "MongoDB", "TailwindCSS"],
     "videoDemo": "https://www.youtube.com/watch?v=example2",
-    "duration": "2 months",
+    "duration": "10 Days",
     "clientOrTeam": "Individual Project",
     "sourceCode": "https://github.com/username/euphoria",
     "testimonials": [

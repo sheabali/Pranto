@@ -79,6 +79,7 @@ const SendmessageIcon = ({
       } dark:hover:bg-zinc-700/25 hover:border outline border-white/10 flex items-center justify-center rounded-full transition-all`}
     >
       <div
+        title="Live"
         ref={sendMessageContainer}
         onMouseEnter={lottieHover}
         onMouseLeave={lottieLeave}
