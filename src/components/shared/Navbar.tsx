@@ -57,7 +57,7 @@ const Navbar = () => {
           <Link href="/" className="flex items-center gap-2">
             <Image src={logo} width={30} height={30} alt="Logo" />
             <span className="text-lg font-semibold text-gray-800 dark:text-white">
-              MyPortfolio
+              Portfolio
             </span>
           </Link>
         </div>

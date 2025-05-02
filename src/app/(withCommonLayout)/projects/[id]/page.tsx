@@ -7,12 +7,13 @@ import Container from '@/components/Container/Container';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Skeleton } from '@/components/ui/skeleton';
 import Image from 'next/image';
-import { Button } from '@/components/ui/button';
 
 import { getProjectById } from '@/services/project';
-import { GoProjectSymlink } from 'react-icons/go';
+
 import { motion } from 'framer-motion';
 import SendmessageIcon from '@/components/lottie-ui/send-icon';
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
 const SingleProject = () => {
   const params = useParams();
@@ -176,11 +177,15 @@ const SingleProject = () => {
                   <strong>Duration:</strong> {project.duration}
                 </p>
               </div>
-              <div className="flex gap-4">
-                <Button className="gap-2">
-                  <GoProjectSymlink className="text-xl" /> Live Preview
-                </Button>
-
+              <div className="flex items-center gap-4">
+                <Link href="/projects">
+                  <Button
+                    variant="outline"
+                    className="outline p-5 rounded-full"
+                  >
+                    Back
+                  </Button>
+                </Link>
                 <SendmessageIcon
                   link={project.link}
                   lottieName={project.title}
