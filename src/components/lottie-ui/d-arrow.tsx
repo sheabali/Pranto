@@ -4,12 +4,13 @@ import { useEffect, useRef, useState } from 'react';
 import { useTheme } from 'next-themes';
 import DAAnimation from '../../lottie/d-arrow/arrow.json';
 import DALightAnimation from '../../lottie/d-arrow/arrow-black.json';
+import Link from 'next/link';
 
 const DArrow = ({
   link,
   lottieName = 'DAIcon',
 }: {
-  link?: string;
+  link?: number;
   lottieName?: string;
 }) => {
   const { resolvedTheme } = useTheme();
@@ -77,16 +78,16 @@ const DArrow = ({
   );
 
   return link ? (
-    <a
-      href={link}
-      target="_blank"
-      rel="noreferrer noopener"
+    <Link
+      href={`projects/${String(link)}`}
+      // target="_blank"
+      // rel="noreferrer noopener"
       className={`relative h-12 w-12 z-10 ${
         isLightMode ? 'bg-white' : 'hover:bg-white'
-      } dark:hover:bg-zinc-700/25    flex items-center justify-center rounded-full transition-all`}
+      } dark:hover:bg-zinc-700/25   border-white/10 flex items-center justify-center rounded-full transition-all`}
     >
       {content}
-    </a>
+    </Link>
   ) : (
     content
   );

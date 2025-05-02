@@ -39,3 +39,13 @@ export type TBlog = {
   createdAt?: string | number | Date;
   timestamp?: string | number | Date;
 };
+
+export type ProjectType = {
+  id: number;
+  work: string;
+  title: string;
+  description: string;
+  image: string;
+  link: string;
+  icon: string[];
+};

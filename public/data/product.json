@@ -1,0 +1,155 @@
+[
+  {
+    "id": 1,
+    "work": "PROJECT AT 🌎 PRACTICE PROJECT",
+    "title": "Personalized Meal Planning & Delivery",
+    "description": "Meal Planning & Delivery Web Application where users can personalize their meal plans and have meals delivered based on their dietary preferences and schedules. The platform should allow customers to choose meal options, set dietary preferences, and schedule deliveries, while meal providers can manage menus and respond to customer requests.",
+    "image": "https://i.ibb.co.com/8DZtWWpM/image-771.png",
+    "link": "https://meal-box-three.vercel.app/",
+    "icon": [
+      "https://i.ibb.co.com/jZx1YXyB/icons8-next-js-400.png",
+      "https://i.ibb.co.com/pjW65hTB/typescript.png",
+      "https://i.ibb.co.com/xS0NbQ7X/social.png",
+      "https://i.ibb.co.com/Q7GQ3VnD/mongodb-svgrepo-com.png",
+      "https://i.ibb.co.com/WvV30J4D/pngfind-com-pc-master-race-png-1363736.png",
+      "https://i.ibb.co.com/rRDf7krV/node-svgrepo-com.png"
+    ],
+    "tags": ["Web Development", "Meal Planning", "E-commerce", "Next.js"],
+    "techStack": ["Next.js", "TypeScript", "Node.js", "MongoDB", "TailwindCSS"],
+    "videoDemo": "https://www.youtube.com/watch?v=example",
+    "duration": "3 months",
+    "clientOrTeam": "Worked with a team of 4 developers and 2 designers.",
+    "sourceCode": "https://github.com/username/project",
+    "testimonials": [
+      {
+        "name": "John Doe",
+        "feedback": "This project significantly improved our customer experience."
+      }
+    ],
+    "features": [
+      "Role-based authentication",
+      "Meal customization by dietary preference",
+      "Order scheduling with calendar view",
+      "Image upload with preview and validation",
+      "Responsive dashboard for customers and providers",
+      "SurjoPay payment integration"
+    ],
+    "challenges": [
+      "Dynamic sidebar with role-based layout",
+      "Form validation with image file in React Hook Form",
+      "Handling secure JWT-based authentication"
+    ],
+    "learnings": [
+      "Efficient form handling with React Hook Form",
+      "Role-specific UI logic in Next.js",
+      "Secure API route protection"
+    ],
+    "status": "Live",
+    "responsibilities": [
+      "Built full customer & provider dashboard",
+      "Integrated form and image upload system",
+      "Implemented SurjoPay checkout system"
+    ],
+    "awardsOrRecognition": ["Featured in DevTalk Showcase 2025"],
+    "deployment": ["Vercel", "GitHub"]
+  },
+  {
+    "id": 2,
+    "work": "PROJECT AT 🌎 PRACTICE PROJECT",
+    "title": "Euphoria - Ecommerce (Apparels) Website Template",
+    "description": "E-commerce platform template built to showcase apparel products with filtering, search, and shopping cart features.",
+    "image": "https://i.ibb.co.com/9925DtpM/image-770.png",
+    "link": "https://car-store-frontend-eight.vercel.app",
+    "icon": [
+      "https://i.ibb.co.com/nMPTWSY0/react.png",
+      "https://i.ibb.co.com/DfGpf16R/Tailwind-CSS-Logo-svg.png",
+      "https://i.ibb.co.com/8nHj8ZgY/redux-512x486.png",
+      "https://i.ibb.co.com/pjW65hTB/typescript.png",
+      "https://i.ibb.co.com/rRDf7krV/node-svgrepo-com.png",
+      "https://i.ibb.co.com/WvV30J4D/pngfind-com-pc-master-race-png-1363736.png",
+      "https://i.ibb.co.com/Q7GQ3VnD/mongodb-svgrepo-com.png",
+      "https://i.ibb.co.com/4DgqF9T/icons8-mongoose-700.png"
+    ],
+    "tags": ["Web Development", "E-commerce", "UI/UX", "React"],
+    "techStack": ["React", "Redux", "TypeScript", "MongoDB", "TailwindCSS"],
+    "videoDemo": "https://www.youtube.com/watch?v=example2",
+    "duration": "2 months",
+    "clientOrTeam": "Individual Project",
+    "sourceCode": "https://github.com/username/euphoria",
+    "testimonials": [
+      {
+        "name": "Client A",
+        "feedback": "Clean UI and smooth user experience."
+      }
+    ],
+    "features": [
+      "Product filtering by category",
+      "Cart and checkout page",
+      "Search functionality with debounce",
+      "Responsive layout and mobile support"
+    ],
+    "challenges": [
+      "Debounced search with Redux state",
+      "Responsive grid design",
+      "Managing cart state globally"
+    ],
+    "learnings": [
+      "Better understanding of Redux Toolkit",
+      "Using Tailwind for scalable UI",
+      "Client-side routing optimization"
+    ],
+    "status": "Live",
+    "responsibilities": [
+      "Designed and developed the UI",
+      "Implemented filtering and search logic",
+      "Managed state using Redux Toolkit"
+    ],
+    "awardsOrRecognition": ["UI Star Badge on CodeMall"],
+    "deployment": ["Vercel", "GitHub"]
+  },
+  {
+    "id": 3,
+    "work": "PROJECT AT 🌎 PRACTICE PROJECT",
+    "title": "Blog Website Template",
+    "description": "A sleek blog template designed for content writers and developers with markdown-based blog management.",
+    "image": "https://i.ibb.co.com/Q7KW0z5b/image-770-1.png",
+    "link": "/login",
+    "icon": ["https://i.ibb.co.com/B5J4VPyz/nextjs-512x512.png"],
+    "tags": ["Blog", "Content Writing", "Template"],
+    "techStack": ["Next.js", "TailwindCSS"],
+    "videoDemo": "https://www.youtube.com/watch?v=example3",
+    "duration": "1 month",
+    "clientOrTeam": "Personal Side Project",
+    "sourceCode": "https://github.com/username/blog-template",
+    "testimonials": [
+      {
+        "name": "Reviewer B",
+        "feedback": "Well structured and easy to customize."
+      }
+    ],
+    "features": [
+      "Static generation of blog posts",
+      "Markdown-based content system",
+      "Author profile and social links",
+      "Light and dark theme support"
+    ],
+    "challenges": [
+      "Content rendering from markdown",
+      "SEO optimization for blog pages",
+      "Dark/light theme toggling"
+    ],
+    "learnings": [
+      "Working with markdown in Next.js",
+      "SEO practices in static pages",
+      "Dynamic theming with Tailwind"
+    ],
+    "status": "Development",
+    "responsibilities": [
+      "Developed blog post templates",
+      "Handled markdown parsing logic",
+      "Integrated social profile components"
+    ],
+    "awardsOrRecognition": ["Top Pick on IndieDev Gallery"],
+    "deployment": ["Netlify", "GitHub"]
+  }
+]
