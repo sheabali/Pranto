@@ -2,17 +2,23 @@
 
 import Link from 'next/link';
 import { Button } from '../ui/button';
-
 import Image from 'next/image';
 import { logo } from '../constant/global';
-
 import ThemeToggle from '../theme-toggle';
 import Download from '../lottie-ui/download-icon';
 import SendIcon from '../lottie-ui/eyes';
 import { useTheme } from 'next-themes';
+import { useEffect, useState } from 'react';
 
 const Navbar = () => {
   const { resolvedTheme } = useTheme();
+  const [hasMounted, setHasMounted] = useState(false);
+
+  useEffect(() => {
+    setHasMounted(true);
+  }, []);
+
+  if (!hasMounted) return null;
 
   const isLightMode = resolvedTheme === 'light';
 
@@ -20,9 +26,10 @@ const Navbar = () => {
     <div
       className={`${
         isLightMode ? 'bg-white' : 'bg-[#0e1c30]'
-      } w-full mx-auto border-b  flex items-center justify-between  py-4 px-10 `}
+      } w-full mx-auto border-b flex items-center justify-between py-4 px-10`}
     >
       <div className="flex items-center">
+        {/* Mobile menu */}
         <div className="relative lg:hidden">
           <div
             tabIndex={0}
@@ -70,8 +77,9 @@ const Navbar = () => {
         </Link>
       </div>
 
+      {/* Desktop menu */}
       <div className="hidden lg:flex">
-        <ul className="flex font-medium space-x-6 ">
+        <ul className="flex font-medium space-x-6">
           <li className="hover:text-gray-600">
             <Link href="/">Home</Link>
           </li>
@@ -88,10 +96,8 @@ const Navbar = () => {
       </div>
 
       <div className="flex gap-4 font-medium items-center">
-        <div>
-          <ThemeToggle />
-        </div>
-        <Button className="font-bold   py-6">
+        <ThemeToggle />
+        <Button className="font-bold py-6">
           <SendIcon /> Resume <Download />
         </Button>
       </div>
