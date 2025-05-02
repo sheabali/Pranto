@@ -160,5 +160,105 @@
     ],
     "awardsOrRecognition": ["Top Pick on IndieDev Gallery"],
     "deployment": ["Netlify", "GitHub"]
+  },
+  {
+    "id": "6ad5e00afdaa459a84fad7213726",
+    "work": "PROJECT AT 🌎 PRACTICE PROJECT",
+    "title": "MeetCasta is a powerful video conferencing platform.",
+    "description": "MeetCasts is a powerful video conferencing platform designed to facilitate seamless virtual meetings, conferences, and collaborations. With a user-friendly interface and robust features, MeetCast provides an unparalleled communication experience for individuals and teams alike.",
+    "image": "https://i.ibb.co.com/Q7KW0z5b/image-770-1.png",
+    "link": "https://meetcast.netlify.app/",
+    "icon": [  "https://i.ibb.co.com/nMPTWSY0/react.png",
+    "https://i.ibb.co.com/DfGpf16R/Tailwind-CSS-Logo-svg.png",
+"https://i.ibb.co.com/6RggZn0Q/icons8-firebase-480.png",
+    "https://i.ibb.co.com/rRDf7krV/node-svgrepo-com.png",
+    "https://i.ibb.co.com/WvV30J4D/pngfind-com-pc-master-race-png-1363736.png",
+    "https://i.ibb.co.com/Q7GQ3VnD/mongodb-svgrepo-com.png"
+    ],
+    "tags": ["Video Vonferencing", "Video Chat App","Blog", "Content Writing", "Video call"],
+    "techStack": ["Next.js", "TailwindCSS"],
+    "videoDemo": "https://www.youtube.com/watch?v=example3",
+    "duration": "1 month",
+    "clientOrTeam": "Worked with a team of 4 developers and 1 designers.",
+    "sourceCode": "https://github.com/username/blog-template",
+    "testimonials": [
+      {
+        "name": "Nafiz Ahmed",
+        "feedback": "This project significantly improved our customer experience."
+      }
+    ],
+    "features": [
+      "HD Video & Audio Quality",
+      "Real-Time Screen Sharing & Collaboration",
+      "Author profile and social links",
+      "Secure Meeting Controls"
+    ],
+    "challenges": [
+      "Content rendering from markdown",
+      "Secure Meeting Controlss"
+    ],
+    "learnings": [
+      "Real-Time Screen Sharing & Collaboration",
+      "Managing team access to an organization repository",
+      "Dynamic theming with Tailwind"
+    ],
+    "status": "Live",
+    "responsibilities": [
+      "Developed blog post templates",
+      "Real-Time Screen Sharing & Collaboration",
+      "Integrated Profile about and more components"
+    ],
+    "awardsOrRecognition": ["Top Pick on IndieDev Gallery"],
+    "deployment": ["Netlify", "GitHub"]
+  },
+  {
+    "id": "6ada4dada59a84ggfad7213726",
+    "work": "PROJECT AT 🌎 PRACTICE PROJECT",
+    "title": "MeetCast is a powerful video conferencing platform.",
+    "description": "MeetCast is a powerful video conferencing platform designe to facilitate seamless virtual meetings, conferences, and collaborations. With a user-friendly interface and robust features, MeetCast provides an unparalleled communication experience for individuals and teams alike.",
+    "image": "https://i.ibb.co.com/Q7KW0z5b/image-770-1.png",
+    "link": "https://meetcast.netlify.app/",
+    "icon": [  "https://i.ibb.co.com/nMPTWSY0/react.png",
+    "https://i.ibb.co.com/DfGpf16R/Tailwind-CSS-Logo-svg.png",
+"https://i.ibb.co.com/6RggZn0Q/icons8-firebase-480.png",
+    "https://i.ibb.co.com/rRDf7krV/node-svgrepo-com.png",
+    "https://i.ibb.co.com/WvV30J4D/pngfind-com-pc-master-race-png-1363736.png",
+    "https://i.ibb.co.com/Q7GQ3VnD/mongodb-svgrepo-com.png"
+    ],
+    "tags": ["Video Vonferencing", "Video Chat App","Blog", "Content Writing", "Video call"],
+    "techStack": ["Next.js", "TailwindCSS"],
+    "videoDemo": "https://www.youtube.com/watch?v=example3",
+    "duration": "1 month",
+    "clientOrTeam": "Worked with a team of 4 developers and 1 designers.",
+    "sourceCode": "https://github.com/username/blog-template",
+    "testimonials": [
+      {
+        "name": "Nafiz Ahmed",
+        "feedback": "This project significantly improved our customer experience."
+      }
+    ],
+    "features": [
+      "HD Video & Audio Quality",
+      "Real-Time Screen Sharing & Collaboration",
+      "Author profile and social links",
+      "Secure Meeting Controls"
+    ],
+    "challenges": [
+      "Content rendering from markdown",
+      "Secure Meeting Controlss"
+    ],
+    "learnings": [
+      "Real-Time Screen Sharing & Collaboration",
+      "Managing team access to an organization repository",
+      "Dynamic theming with Tailwind"
+    ],
+    "status": "Live",
+    "responsibilities": [
+      "Developed blog post templates",
+      "Real-Time Screen Sharing & Collaboration",
+      "Integrated Profile about and more components"
+    ],
+    "awardsOrRecognition": ["Top Pick on IndieDev Gallery"],
+    "deployment": ["Netlify", "GitHub"]
   }
 ]

@@ -29,7 +29,7 @@ const Project = () => {
         </div>
 
         <div className="space-y-10 w-full mx-auto">
-          {products.map((project, index) => (
+          {products.slice(0, 3).map((project, index) => (
             <motion.div
               key={project.id}
               initial={{ opacity: 0, y: 50 }}

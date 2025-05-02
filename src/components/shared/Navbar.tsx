@@ -9,10 +9,19 @@ import { logo } from '../constant/global';
 import ThemeToggle from '../theme-toggle';
 import Download from '../lottie-ui/download-icon';
 import SendIcon from '../lottie-ui/eyes';
+import { useTheme } from 'next-themes';
 
 const Navbar = () => {
+  const { resolvedTheme } = useTheme();
+
+  const isLightMode = resolvedTheme === 'light';
+
   return (
-    <div className="w-full mx-auto flex items-center justify-between bg-white border-b py-4 px-10">
+    <div
+      className={`${
+        isLightMode ? 'bg-white' : 'bg-[#0e1c30]'
+      } w-full mx-auto border-b  flex items-center justify-between  py-4 px-10 `}
+    >
       <div className="flex items-center">
         <div className="relative lg:hidden">
           <div
@@ -62,7 +71,7 @@ const Navbar = () => {
       </div>
 
       <div className="hidden lg:flex">
-        <ul className="flex font-medium space-x-6 text-gray-800">
+        <ul className="flex font-medium space-x-6 ">
           <li className="hover:text-gray-600">
             <Link href="/">Home</Link>
           </li>

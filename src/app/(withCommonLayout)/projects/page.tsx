@@ -53,7 +53,7 @@ const Project = () => {
       {error && <p className="text-red-500">{error}</p>}
 
       {!loading && !error && projects.length > 0 && (
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 my-12 sm:grid-cols-2 md:grid-cols-3 gap-4">
           {projects.map((project: ProjectType) => (
             <Card
               key={project?.id}
