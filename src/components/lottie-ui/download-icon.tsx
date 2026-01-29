@@ -1,35 +1,35 @@
-'use client';
+"use client";
 
-import { useEffect, useRef } from 'react';
-import { useTheme } from 'next-themes';
-import InboxDownAnimation from '../../lottie/inbox-down/InboxDown.json';
-import InboxDownLightAnimation from '../../lottie/inbox-down/InboxDownLight.json';
+import { useTheme } from "next-themes";
+import { useEffect, useRef } from "react";
+import InboxDownAnimation from "../../lottie/inbox-down/InboxDown.json";
+import InboxDownLightAnimation from "../../lottie/inbox-down/InboxDownLight.json";
 
 const Download = () => {
   const { resolvedTheme } = useTheme();
-  const isLightMode = resolvedTheme === 'light';
+  const isLightMode = resolvedTheme === "light";
   const downloadContainer = useRef<HTMLDivElement | null>(null);
 
   async function getLottie() {
-    const lot = await import('lottie-web');
+    const lot = await import("lottie-web");
 
     if (!downloadContainer.current) return;
     lot.default.loadAnimation({
-      name: 'DownloadIcon',
-      renderer: 'svg',
+      name: "DownloadIcon",
+      renderer: "svg",
       loop: false,
       autoplay: false,
       animationData: isLightMode ? InboxDownLightAnimation : InboxDownAnimation,
       container: downloadContainer.current,
       rendererSettings: {
-        preserveAspectRatio: 'xMinYMin slice',
+        preserveAspectRatio: "xMinYMin slice",
       },
     });
   }
 
   async function destroyLottie() {
-    const lot = await import('lottie-web');
-    lot.default.destroy('DownloadIcon');
+    const lot = await import("lottie-web");
+    lot.default.destroy("DownloadIcon");
   }
 
   useEffect(() => {
@@ -41,13 +41,13 @@ const Download = () => {
   }, [isLightMode]);
 
   const lottieHover = async () => {
-    const lot = await import('lottie-web');
-    lot.default.play('DownloadIcon');
+    const lot = await import("lottie-web");
+    lot.default.play("DownloadIcon");
   };
 
   const lottieLeave = async () => {
-    const lot = await import('lottie-web');
-    lot.default.stop('DownloadIcon');
+    const lot = await import("lottie-web");
+    lot.default.stop("DownloadIcon");
   };
 
   return (

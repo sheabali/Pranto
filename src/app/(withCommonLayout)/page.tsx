@@ -1,16 +1,15 @@
-import About from '@/pages/Home/About/About';
-import Banner from '@/pages/Home/Banner/Banner';
-import Contact from '@/pages/Home/Contact/Contact';
-// import ExperienceTimeline from '@/pages/Home/Experience/ExperienceTimeline';
-import Project from '@/pages/Home/Project/Project';
-import Skills from '@/pages/Home/Skills/Skills';
-
-import React from 'react';
+import About from "@/pages/Home/About/About";
+import Banner from "@/pages/Home/Banner/Banner";
+import Contact from "@/pages/Home/Contact/Contact";
+// import ExperienceTimeline from "@/pages/Home/Experience/ExperienceTimeline";
+import Project from "@/pages/Home/Project/Project";
+import Skills from "@/pages/Home/Skills/Skills";
 
 const HomePage = async () => {
   return (
     <div>
       <Banner />
+
       <Skills />
       <About />
       {/* <ExperienceTimeline /> */}
