@@ -1,103 +1,107 @@
-'use client';
+"use client";
 
-import { useEffect, useState } from 'react';
-import Image from 'next/image';
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
+import Image from "next/image";
+import { useEffect, useState } from "react";
 
-import Container from '@/components/Container/Container';
-import SendmessageIcon from '@/components/lottie-ui/send-icon';
-import DArrow from '@/components/lottie-ui/d-arrow';
-import { ProjectType } from '@/components/constant/global';
+import { ProjectType } from "@/components/constant/global";
+import DArrow from "@/components/lottie-ui/d-arrow";
+import SendmessageIcon from "@/components/lottie-ui/send-icon";
 
 const Project = () => {
   const [products, setProducts] = useState<ProjectType[]>([]);
 
   useEffect(() => {
-    fetch('/data/product.json')
+    fetch("/data/product.json")
       .then((res) => res.json())
       .then((data) => setProducts(data))
-      .catch((err) => console.error('Failed to load projects:', err));
+      .catch((err) => console.error("Failed to load projects:", err));
   }, []);
 
   return (
-    <Container>
-      <div className=" border rounded min-h-screen p-6">
-        <div className="flex justify-center">
-          <h1 className="mb-20 mt-10  text-4xl relative inline-block font-bold underline-skew">
-            My <span className="font-semibold">Projects</span>
-          </h1>
-        </div>
+    <section className="container mx-auto min-h-screen px-4 sm:px-6 py-5">
+      {/* Title */}
+      <div className="flex justify-center">
+        <h1 className="mb-12 sm:mb-20 mt-6 text-3xl sm:text-4xl font-bold relative inline-block underline-skew">
+          My <span className="font-semibold">Projects</span>
+        </h1>
+      </div>
 
-        <div className="space-y-10 w-full mx-auto">
-          {products.slice(0, 3).map((project, index) => (
+      {/* Projects */}
+      <div className="sm:space-y-12 space-y-6 mx-auto">
+        {products.slice(0, 3).map((project, index) => (
+          <motion.div
+            key={project.id}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: index * 0.15 }}
+            className={`flex flex-col  md:flex-row items-center  text-white p-4 sm:p-6 rounded-2xl shadow-lg gap-6 sm:gap-10 ${
+              index % 2 !== 0 ? "md:flex-row-reverse" : ""
+            }`}
+          >
+            {/* Image */}
             <motion.div
-              key={project.id}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
-              viewport={{ once: true }}
-              className={`flex flex-col md:flex-row bg-gray-900 text-white p-6 rounded-2xl shadow-lg max-w-6xl mx-auto gap-6 ${
-                index % 2 !== 0 ? 'md:flex-row-reverse md:gap-20' : ''
-              }`}
+              initial={{ scale: 0.95 }}
+              whileInView={{ scale: 1 }}
+              transition={{ duration: 0.5 }}
+              className="w-full md:w-1/2"
             >
-              {/* Left Side - Image */}
+              <Image
+                src={project.image}
+                alt={project.title}
+                width={600}
+                height={400}
+                className="rounded-xl w-full h-auto object-cover"
+                priority={index === 0}
+              />
+            </motion.div>
+
+            {/* Content */}
+            <div className="w-full md:w-1/2 flex flex-col justify-center text-center md:text-left">
+              <p className="text-sm text-gray-400 font-semibold">
+                {project.work}
+              </p>
+
+              <h3 className="text-2xl sm:text-3xl font-bold mt-2">
+                {project.title}
+              </h3>
+
+              <p className="text-gray-400 mt-3 text-sm leading-relaxed">
+                {project.description}
+              </p>
+
+              {/* Tech Icons */}
               <motion.div
-                initial={{ scale: 0.95 }}
-                whileInView={{ scale: 1 }}
-                transition={{ duration: 0.5 }}
-                className="w-full md:w-1/2"
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.4, delay: 0.2 }}
+                className="flex flex-wrap justify-center md:justify-start gap-3 mt-4"
               >
-                <Image
-                  src={project.image}
-                  alt="Project Image"
-                  height={400}
-                  width={400}
-                  className="rounded-xl h-auto object-cover"
-                />
+                {project.icon?.map((icon, key) => (
+                  <Image
+                    key={key}
+                    src={icon}
+                    height={32}
+                    width={32}
+                    alt="tech icon"
+                  />
+                ))}
               </motion.div>
 
-              {/* Right Side - Content */}
-              <div className="w-full md:w-1/2 flex flex-col justify-center text-center md:text-left">
-                <h2 className="text-md text-gray-400 font-bold">
-                  {project.work}
-                </h2>
-                <h3 className="text-3xl font-bold mt-2">{project.title}</h3>
-                <p className="text-gray-400 mt-2 text-sm">
-                  {project.description}
-                </p>
-
-                {/* Icons */}
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5, delay: 0.3 }}
-                  className="flex items-center gap-4 my-4"
-                >
-                  {project.icon?.map((icon, key) => (
-                    <Image
-                      key={key}
-                      src={icon}
-                      height={35}
-                      width={35}
-                      alt="icon"
-                    />
-                  ))}
-                </motion.div>
-
-                {/* Links */}
-                <div className="flex items-center gap-4 mt-6">
-                  <SendmessageIcon
-                    link={project.link}
-                    lottieName={project.title}
-                  />
-                  <DArrow link={project.id} lottieName={project.description} />
-                </div>
+              {/* Actions */}
+              <div className="flex flex-wrap justify-center md:justify-start gap-4 mt-6">
+                <SendmessageIcon
+                  link={project.link}
+                  lottieName={project.title}
+                />
+                <DArrow link={project.id} lottieName={project.description} />
               </div>
-            </motion.div>
-          ))}
-        </div>
+            </div>
+          </motion.div>
+        ))}
       </div>
-    </Container>
+    </section>
   );
 };
 

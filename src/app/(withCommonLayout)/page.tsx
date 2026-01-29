@@ -9,7 +9,6 @@ const HomePage = async () => {
   return (
     <div>
       <Banner />
-
       <Skills />
       <About />
       {/* <ExperienceTimeline /> */}
