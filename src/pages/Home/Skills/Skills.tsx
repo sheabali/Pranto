@@ -1,4 +1,5 @@
-'use client';
+/* eslint-disable @typescript-eslint/no-explicit-any */
+"use client";
 
 import {
   Express,
@@ -11,11 +12,10 @@ import {
   React,
   Redux,
   Typescript,
-} from '@/components/constant/global';
+} from "@/components/constant/global";
 
-import Container from '@/components/Container/Container';
-import Image from 'next/image';
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
+import Image from "next/image";
 
 const skills = [
   Js,
@@ -46,47 +46,45 @@ const itemVariants = {
     opacity: 1,
     scale: 1,
     y: 0,
-    transition: { type: 'spring', stiffness: 100 },
+    transition: { type: "spring", stiffness: 100 },
   },
 };
 
 const Skills = () => {
   return (
-    <Container>
-      <div className=" border-b my-40 rounded">
-        <div className="text-center my-14">
-          <h1 className="text-4xl relative inline-block font-bold  underline-skew">
-            My <span className="font-bol ">Skills</span>
-          </h1>
-        </div>
-
-        <motion.div
-          className="p-6 sm:p-10  rounded shadow"
-          variants={containerVariants}
-          initial="hidden"
-          animate="show"
-        >
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
-            {skills.map((icon, index) => (
-              <motion.div
-                key={index}
-                variants={itemVariants}
-                className="border border-black bg-white rounded p-4 flex items-center justify-center"
-                whileHover={{ scale: 1.1 }}
-              >
-                <Image
-                  src={icon}
-                  width={100}
-                  height={100}
-                  alt={`Skill ${index + 1}`}
-                  className="w-20 h-20 object-contain"
-                />
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
+    <div className="container mx-auto border-b my-10 rounded">
+      <div className="text-center my-14">
+        <h1 className="text-4xl relative inline-block font-bold  underline-skew">
+          My <span className="font-bol ">Skills</span>
+        </h1>
       </div>
-    </Container>
+
+      <motion.div
+        className="p-6 sm:p-10  rounded shadow"
+        variants={containerVariants}
+        initial="hidden"
+        animate="show"
+      >
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+          {skills.map((icon, index) => (
+            <motion.div
+              key={index}
+              variants={itemVariants as any}
+              className="border border-black bg-white rounded p-4 flex items-center justify-center"
+              whileHover={{ scale: 1.1 }}
+            >
+              <Image
+                src={icon}
+                width={100}
+                height={100}
+                alt={`Skill ${index + 1}`}
+                className="w-20 h-20 object-contain"
+              />
+            </motion.div>
+          ))}
+        </div>
+      </motion.div>
+    </div>
   );
 };
 
